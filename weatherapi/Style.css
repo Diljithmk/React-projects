@@ -1,0 +1,170 @@
+/* General Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://images.pexels.com/photos/1292115/pexels-photo-1292115.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+/* Main Content Area */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+    border-radius: 15px;
+    padding: 40px;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 500px; /* Ensure content area has a minimum height */
+    transition: all 0.3s ease;
+}
+
+/* Headline Text */
+.text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Adds depth to the text */
+    letter-spacing: 1px;
+}
+
+/* Search Box Container */
+.searchbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 35px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Search Input */
+input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 18px;
+    width: 70%;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.6);
+    border: 2px solid #007bff;
+}
+
+/* Search Button */
+button {
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #00c6ff, #007bff); /* Gradient for depth */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold; /* Make the button text bold for better visibility */
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Capitalize text for a more bold look */
+}
+
+/* Button Hover State */
+button:hover {
+    background: linear-gradient(135deg, #0088cc, #0056b3); /* Darker gradient on hover */
+    transform: scale(1.1); /* Slight scale-up effect */
+    box-shadow: 0 10px 30px rgba(0, 140, 255, 0.3); /* Subtle shadow on hover */
+}
+
+/* Button Active (Clicked) State */
+button:active {
+    transform: scale(0.95); /* Shrinks slightly to show click effect */
+    box-shadow: 0 4px 10px rgba(0, 140, 255, 0.4); /* Deeper shadow when pressed */
+}
+
+/* Button Focus State */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.6); /* Highlight when focused */
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+
+    .text {
+        font-size: 24px;
+    }
+
+    .searchbox {
+        max-width: 400px;
+        margin-bottom: 15px;
+    }
+
+    .searchbox input {
+        font-size: 16px;
+    }
+
+    .searchbox button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 15px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .searchbox {
+        max-width: 90%;
+    }
+
+    .searchbox input {
+        font-size: 14px;
+    }
+
+    .searchbox button {
+        font-size: 14px;
+    }
+}
